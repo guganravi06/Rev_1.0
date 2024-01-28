@@ -10,9 +10,6 @@ yesBtn.addEventListener('click',()=>{
     question.innerHTML='waiting for the day';
      image.src="yes.gif";
 }); 
-yesBtn.addEventListener('click',()=>{
-    image.innerHTML="yes.gif";
-});
 
 function sendSMS() {
     // Make an HTTP POST request to your local server
