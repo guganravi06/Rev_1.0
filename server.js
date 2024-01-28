@@ -4,7 +4,7 @@ const twilio = require('twilio');
 const cors = require('cors');  // Import cors module
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());  // Enable CORS for all routes
@@ -16,7 +16,7 @@ const authToken = 'b1e86ed51c170238377fd4880cc6181c';
 const client = twilio(accountSid, authToken);
 
 app.post('/send-sms', (req, res) => {
-  const message = 'Someone said yes on your website!';
+  const message = 'She said yes on your website!';
   const toNumber = '+919524003387';
   const fromNumber = '+15075851357';
 
