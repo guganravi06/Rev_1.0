@@ -15,7 +15,7 @@ yesBtn.addEventListener('click',()=>{
 
 function sendSMS() {
     // Make an HTTP POST request to your local server
-    $.post('http://localhost:3000/send-sms', function (data) {
+    $.post('http://dulcet-axolotl-7109c7.netlify.app/send-sms', function (data) {
         console.log(data);
         alert('SMS sent successfully!');
 
