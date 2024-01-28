@@ -25,6 +25,7 @@ const authToken = 'b1e86ed51c170238377fd4880cc6181c';
 const client = twilio(accountSid, authToken);
 
 app.post('/send-sms', (req, res) => {
+  console.log('Incoming request:', req.body);
   const message = 'She said yes on your website!';
   const toNumber = '+919524003387';
   const fromNumber = '+15075851357';
