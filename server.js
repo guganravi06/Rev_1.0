@@ -1,6 +1,6 @@
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://dulcet-axolotl-7109c7.netlify.app');
+  res.setHeader('Access-Control-Allow-Origin', 'https://dulcet-axolotl-7109c7.netlify.app/');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
