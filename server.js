@@ -1,3 +1,11 @@
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://dulcet-axolotl-7109c7.netlify.app');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const twilio = require('twilio');
@@ -5,6 +13,7 @@ const cors = require('cors');  // Import cors module
 
 const app = express();
 const port = process.env.PORT || 3000;
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());  // Enable CORS for all routes
