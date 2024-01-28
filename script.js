@@ -8,6 +8,7 @@ const containerRect = container.getBoundingClientRect();
 
 yesBtn.addEventListener('click',()=>{
     question.innerHTML='waiting for the day';
+     image.src="yes.gif";
 }); 
 yesBtn.addEventListener('click',()=>{
     image.innerHTML="yes.gif";
@@ -18,7 +19,7 @@ function sendSMS() {
    $.post('http://dulcet-axolotl-7109c7.netlify.app/send-sms', function (data) {
     console.log(data);
     alert('SMS sent successfully!');
-    document.getElementById('dynamicImage').src = 'yes.gif'; 
+   
     });
 }
 
